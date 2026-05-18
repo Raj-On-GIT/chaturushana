@@ -24,7 +24,7 @@ const herbsData = [
     rasa: "कटु",
     guna: "लघु, स्निग्ध, तीक्ष्ण",
     vipaka: "मधुर",
-    veerya: "अनुष्ण शीत",
+    veerya: "अनुष्णशीत",
     karma: "कासहर"
   },
   {
@@ -48,7 +48,7 @@ const herbsData = [
     rasa: "कटु",
     guna: "लघु, स्निग्ध, तीक्ष्ण",
     vipaka: "मधुर",
-    veerya: "अनुष्ण शीत",
+    veerya: "अनुष्णशीत",
     karma: "कासहर"
   }
 ];
