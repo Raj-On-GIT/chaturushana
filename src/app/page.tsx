@@ -53,7 +53,7 @@ const herbsData = [
   }
 ];
 
-const HerbCard = ({ herb }) => {
+const HerbCard = ({ herb }: { herb: any }) => {
   return (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(20,83,45,0.08)] transition-all duration-500 border border-stone-100/50 flex flex-col h-full">
       
