@@ -5,30 +5,6 @@ import { Leaf } from 'lucide-react';
 const herbsData = [
   {
     id: 1,
-    name: "पिप्पली",
-    englishName: "Pippali",
-    latinName: "Piper longum",
-    family: "Piperaceae",
-    rasa: "कटु",
-    guna: "लघु, स्निग्ध, तीक्ष्ण",
-    vipaka: "मधुर",
-    veerya: "अनुष्ण शीत",
-    karma: "कास, श्वास, ज्वर"
-  },
-  {
-    id: 2,
-    name: "मरिच",
-    englishName: "Maricha",
-    latinName: "Piper nigrum",
-    family: "Piperaceae",
-    rasa: "कटु",
-    guna: "लघु, तीक्ष्ण, रूक्ष",
-    vipaka: "कटु",
-    veerya: "उष्ण",
-    karma: "दीपन, कफवातहर"
-  },
-  {
-    id: 3,
     name: "शुण्ठी",
     englishName: "Shunthi",
     latinName: "Zingiber officinale",
@@ -37,19 +13,43 @@ const herbsData = [
     guna: "लघु, स्निग्ध",
     vipaka: "मधुर",
     veerya: "उष्ण",
-    karma: "दीपन, पाचन, वातश्लेष्महर"
+    karma: "तृप्तिघ्न"
+  },
+  {
+    id: 2,
+    name: "पिप्पली",
+    englishName: "Pippali",
+    latinName: "Piper longum",
+    family: "Piperaceae",
+    rasa: "कटु",
+    guna: "लघु, स्निग्ध, तीक्ष्ण",
+    vipaka: "मधुर",
+    veerya: "अनुष्ण शीत",
+    karma: "कासहर"
+  },
+  {
+    id: 3,
+    name: "मरिच",
+    englishName: "Maricha",
+    latinName: "Piper nigrum",
+    family: "Piperaceae",
+    rasa: "कटु",
+    guna: "लघु, तीक्ष्ण",
+    vipaka: "कटु",
+    veerya: "उष्ण",
+    karma: "दीपन"
   },
   {
     id: 4,
     name: "पिप्पलीमूल",
     englishName: "Pippalimoola",
-    latinName: "Piper longum (Root)",
+    latinName: <>Root of <span className="italic">Piper longum</span></>,
     family: "Piperaceae",
     rasa: "कटु",
-    guna: "लघु, रूक्ष",
-    vipaka: "कटु",
-    veerya: "उष्ण",
-    karma: "दीपन, पाचन, वातहर"
+    guna: "लघु, स्निग्ध, तीक्ष्ण",
+    vipaka: "मधुर",
+    veerya: "अनुष्ण शीत",
+    karma: "कासहर"
   }
 ];
 
@@ -77,7 +77,9 @@ const HerbCard = ({ herb }: { herb: any }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6 border-b border-stone-100">
           <div>
             <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Latin Name</p>
-            <p className="text-stone-800 font-medium italic">{herb.latinName}</p>
+            <p className={`text-stone-800 font-medium ${herb.id !== 4 ? 'italic' : ''}`}>
+              {herb.latinName}
+            </p>
           </div>
           <div>
             <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Family</p>
